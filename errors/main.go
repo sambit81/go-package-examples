@@ -1,13 +1,17 @@
 package main
 
 import (
-	"errors"
 	"fmt"
 )
 
 func process(i int) error {
+	/**
 	if i%2 == 0 {
 		return errors.New("only odd numbers allowed")
+	}
+	*/
+	if i%2 == 0 {
+		return fmt.Errorf("only odd numbers allowed, got %d", i)
 	}
 	return nil
 }
